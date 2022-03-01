@@ -1,14 +1,30 @@
 #!/usr/bin/python 
 
+# +++++++++>>+.>++.<<<[->>>[-<+<+>>]<.[-<+>>+<]<.[->+>+<<]>>.[-<+<+>>]<<<]
+
+
+# Memory represents an infinite array of integers, who's default values are zero
+# The pointer represents a location in memory
+# Instructions are executed in order
+# '+' add 1 at pointer
+# '-' subtract 1 at pointer
+# '>' move pointer fowards 1
+# '<' move pointer backwards 1
+# '[' if value at pointer is 0, jump to 1 past corresponding ']', otherwise move pointer up by 1
+# ']' if value at pointer is 0, move pointer up by 1, otherwise jump 1 past corresponding '['
+# '.' print number at pointer
+
 ins = """
-+++++++++>>+.>++.<<<[->>>[-<+<+>>]<.[-<+>>+<]<.[->+>+<<]>>.[-<+<+>>]<<<]
++++-. This prints 2
+><.   This prints 2
+[-].  This prints 0
 """
 
 sleep_time = 0.000
-show_steps = False
-verbose_steps = False
+show_steps = True
+verbose_steps = True
 fancy_simple_cursor = True
-steps_per_print = 10000
+steps_per_print = 1
 
 
 
